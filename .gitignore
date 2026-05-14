@@ -1,0 +1,91 @@
+## Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+## Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Rider (если вдруг откроешь проект там)
+.idea/
+
+## VS Code
+.vscode/
+
+## Visual Studio Code Workspace
+*.code-workspace
+
+# MAUI
+*.apk
+*.aab
+
+# Android
+*.keystore
+
+# Apple
+*.mobileprovision
+*.p12
+
+# Generated files
+GeneratedMSBuildEditorConfig.editorconfig
+
+## NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## .NET Core
+project.assets.json
+*.runtimeconfig.dev.json
+
+## Resharper
+_ReSharper*/
+*.DotSettings.user
+
+## Test Results
+TestResults/
+*.trx
+
+## Publish output
+publish/
+*.publishsettings
+
+## Azure
+*.azurePubxml
+
+## IIS Express
+IISExpress/
+*.iisExpress.config
+
+## Windows
+Thumbs.db
+Desktop.ini
+
+## Mac
+.DS_Store
+
+## Logs
+*.log
+
+## SQLite
+*.db
+*.db-shm
+*.db-wal
+
+## Coverage
+coverage/
+*.coverage
+*.coveragexml
+
+## Temporary Files
+*.tmp
+*.temp
