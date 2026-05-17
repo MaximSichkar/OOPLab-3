@@ -11,9 +11,7 @@ namespace Lab_3_OOP_MAUI
 
         public DatabaseService()
         {
-            string dbPath = Path.Combine(
-                FileSystem.AppDataDirectory,
-                "books.db");
+            string dbPath = Path.Combine(FileSystem.AppDataDirectory, "books.db");
 
             _database = new SQLiteAsyncConnection(dbPath);
 
@@ -28,7 +26,9 @@ namespace Lab_3_OOP_MAUI
         public Task<int> SaveBookAsync(Book book)
         {
             if (book.Id != 0)
+            {
                 return _database.UpdateAsync(book);
+            }                
 
             return _database.InsertAsync(book);
         }

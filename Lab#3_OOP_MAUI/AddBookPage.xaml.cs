@@ -32,12 +32,9 @@ public partial class AddBookPage : ContentPage
         PriceEntry.Text = book.Price.ToString();
     }
 
-    private async void OnSaveClicked(
-    object sender,
-    EventArgs e)
+    private async void OnSaveClicked(object sender, EventArgs e)
     {
-        if (string.IsNullOrWhiteSpace(
-            TitleEntry.Text))
+        if (string.IsNullOrWhiteSpace(TitleEntry.Text))
         {
             await DisplayAlert(
                 "Error",
@@ -47,8 +44,7 @@ public partial class AddBookPage : ContentPage
             return;
         }
 
-        if (string.IsNullOrWhiteSpace(
-            AuthorEntry.Text))
+        if (string.IsNullOrWhiteSpace(AuthorEntry.Text))
         {
             await DisplayAlert(
                 "Error",
@@ -58,9 +54,7 @@ public partial class AddBookPage : ContentPage
             return;
         }
 
-        if (!int.TryParse(
-            YearEntry.Text,
-            out int year))
+        if (!int.TryParse(YearEntry.Text, out int year))
         {
             await DisplayAlert(
                 "Error",
@@ -80,9 +74,7 @@ public partial class AddBookPage : ContentPage
             return;
         }
 
-        if (!double.TryParse(
-            PriceEntry.Text,
-            out double price))
+        if (!double.TryParse(PriceEntry.Text, out double price))
         {
             await DisplayAlert(
                 "Error",

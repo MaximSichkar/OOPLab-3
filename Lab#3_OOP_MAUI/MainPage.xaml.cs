@@ -24,20 +24,15 @@ namespace Lab_3_OOP_MAUI
         {
             base.OnAppearing();
 
-            BooksCollection.ItemsSource =
-                await _databaseService.GetBooksAsync();
+            BooksCollection.ItemsSource = await _databaseService.GetBooksAsync();
         }
 
-        private async void OnAddBookClicked(
-            object sender,
-            EventArgs e)
+        private async void OnAddBookClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new AddBookPage(_databaseService));
         }
 
-        private async void OnDeleteClicked(
-            object sender,
-            EventArgs e)
+        private async void OnDeleteClicked(object sender, EventArgs e)
         {
             var button = sender as Button;
 
@@ -45,19 +40,15 @@ namespace Lab_3_OOP_MAUI
 
             await _databaseService.DeleteBookAsync(book);
 
-            BooksCollection.ItemsSource =
-                await _databaseService.GetBooksAsync();
+            BooksCollection.ItemsSource = await _databaseService.GetBooksAsync();
         }
-        private async void OnEditClicked(
-            object sender,
-            EventArgs e)
+        private async void OnEditClicked(object sender, EventArgs e)
         {
             var button = sender as Button;
 
             var book = button.BindingContext as Book;
 
-            await Navigation.PushAsync(
-                new AddBookPage(_databaseService, book));
+            await Navigation.PushAsync(new AddBookPage(_databaseService, book));
         }
     }
 }
